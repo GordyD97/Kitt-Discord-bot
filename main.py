@@ -6,3 +6,4 @@ from responses import get_response
 
 load_dotenv()
 TOKEN: Final[str] = os.getenv('DISCORD_TOKEN')
+print("dot env loaded ")
