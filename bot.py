@@ -33,7 +33,7 @@ async def send_message(message, user_message, is_private):
 
 def run_discord_bot():
     # Replace TOKEN with your actual Discord bot token
-    TOKEN = "YOUR_DISCORD_BOT_TOKEN_HERE"
+    TOKEN = 'DISCORD_TOKEN'
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
