@@ -52,7 +52,7 @@ async def send_message(message: Message, user_message: str) -> None:
 
         # main entry point
 
-
+# bot is online but does not respond. 
 def main() -> None:
     client.run(token=TOKEN)
 
