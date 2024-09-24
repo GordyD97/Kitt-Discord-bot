@@ -12,7 +12,7 @@ def get_response(message: str) -> str:
         return 'Hey there!'
 
     elif 'roll dice' in lowered:
-        return f'You rolled :'str(random.randint(1, 6))''
+        return f'You rolled :{str(random.randint(1, 6))}'
 
     # if p_message == '!help':
     #     return 'This is a help message that you can modify.'
