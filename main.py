@@ -33,30 +33,34 @@ async def send_message(message: Message, user_message: str) -> None:
 
         #  bot start up /////////////////////////////////////////////////////
 
-    @client.event
-    async def on_ready() -> None:
-        print(f'{client.user} is now running!')
+@client.event
+async def on_ready() -> None:
+    print(f'{client.user} is now running!')
 
     # handling incoming messages
+# check permissions of bot as of 10/6/24
 
-    async def on_message(message: Message) -> None:
-        if message.author == client.user:
+async def on_message(message: Message) -> None:
+    if message.author == client.user:
             return
 
-        username: str = str(message.author)
-        user_message: str = message.content
-        channel: str = str(message.channel)
+    username: str = str(message.author)
+    user_message: str = message.content
+    channel: str = str(message.channel)
 
-        print(f'[{channel}] {username}:"{user_message}"')
-        await send_message(message, user_message)
+    print(f'[{channel}] {username}:"{user_message}"')
+    await send_message(message, user_message)
 
         # main entry point
 
 
-        if permissions.administrator:
-            print("The bot has Administrator permissions.")
-        if permissions.manage_messages:
-            print("The bot can manage messages.")
+    if permissions.administrator:
+        print("The bot has Administrator permissions.")
+    if permissions.manage_messages:
+        print("The bot can manage messages.")
+        
+        # 564034433186880 - permision integer
+
 
 
 # bot is online but does not respond.
